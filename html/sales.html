@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Transaction · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Sales Transaction</h1>
+          <p class="page-sub">Record a new sale and update your inventory.</p>
+        </div>
+        <div id="userMenu"></div>
+      </header>
 
+      <div class="sales-grid">
+        <section class="card" aria-label="Select product">
+          <h2>Select Product</h2>
+          <label class="search-box">
+            <span data-icon="search" data-size="20"></span>
+            <input id="productSearch" type="search" placeholder="Search product..." aria-label="Search product">
+          </label>
+          <div class="product-list" id="productList"></div>
+        </section>
+
+        <section class="card" aria-label="Current sale">
+          <h2>Current Sale</h2>
+          <div class="table-card">
+            <div class="table-wrap">
+              <table class="sale-table">
+                <thead><tr><th>Product</th><th>Qty</th><th>Price</th><th>Total</th><th><span class="sr-only">Remove</span></th></tr></thead>
+                <tbody id="saleBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="total-row"><span>Total Amount</span><strong id="saleTotal">₱0</strong></div>
+          <button type="button" class="btn btn-blue btn-block" id="completeBtn">Complete Sale</button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/sales.js"></script>
+</body>
+</html>
