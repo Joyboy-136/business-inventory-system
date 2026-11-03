@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation Flow · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1>Navigation Flow</h1>
+        <div id="userMenu"></div>
+      </header>
+
+      <section class="flow-card">
+        <svg viewBox="0 0 900 400" role="img" aria-label="Flow: Login to Dashboard, then Products, Sales or Inventory">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#1AA6B0"/>
+            </marker>
+          </defs>
+
+          <g stroke="#1AA6B0" stroke-width="2" fill="none">
+            <line x1="450" y1="90" x2="450" y2="130" marker-end="url(#arrow)"/>
+            <line x1="450" y1="190" x2="450" y2="240"/>
+            <line x1="150" y1="240" x2="750" y2="240"/>
+            <line x1="150" y1="240" x2="150" y2="290" marker-end="url(#arrow)"/>
+            <line x1="450" y1="240" x2="450" y2="290" marker-end="url(#arrow)"/>
+            <line x1="750" y1="240" x2="750" y2="290" marker-end="url(#arrow)"/>
+          </g>
+
+          <a class="flow-node" href="index.html" id="nodeLogin" aria-label="Login (logs you out)"><title>Login (logs you out)</title>
+            <rect x="350" y="30" width="200" height="60" rx="10"/><text x="450" y="60" text-anchor="middle" dominant-baseline="central">Login</text></a>
+          <a class="flow-node" href="dashboard.html" aria-label="Dashboard">
+            <rect x="350" y="130" width="200" height="60" rx="10"/><text x="450" y="160" text-anchor="middle" dominant-baseline="central">Dashboard</text></a>
+          <a class="flow-node" href="products.html" aria-label="Products">
+            <rect x="50" y="290" width="200" height="60" rx="10"/><text x="150" y="320" text-anchor="middle" dominant-baseline="central">Products</text></a>
+          <a class="flow-node" href="sales.html" aria-label="Sales">
+            <rect x="350" y="290" width="200" height="60" rx="10"/><text x="450" y="320" text-anchor="middle" dominant-baseline="central">Sales</text></a>
+          <a class="flow-node" href="inventory.html" aria-label="Inventory">
+            <rect x="650" y="290" width="200" height="60" rx="10"/><text x="750" y="320" text-anchor="middle" dominant-baseline="central">Inventory</text></a>
+        </svg>
+        <p class="flow-note">Click a box to open that page.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/flow.js"></script>
+</body>
+</html>
